@@ -11,5 +11,9 @@ RUN apk update && \
 	conda install -y jupyter && \
 	rm ~/install_miniconda.sh
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--notebook-dir=/jupyter/notebook", "--config=/jupyter/conf/jupyter_notebook_config.py"]
+#COPY start.sh /jupyter
+#CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--notebook-dir=/jupyter/notebook", "--config=/jupyter/conf/jupyter_notebook_config.py"]
+CMD ["/jupyter/conf/cmd.sh"]
+
+
 
