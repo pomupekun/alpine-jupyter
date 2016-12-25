@@ -1,0 +1,9 @@
+alpine-jupyter:
+  #  build: .
+  image: "alpine-jupyter:latest"
+  ports:
+    - "8888:8888"
+  volumes:
+    - ~/notebook:/jupyter/notebook
+    - ./conf:/jupyter/conf
+
